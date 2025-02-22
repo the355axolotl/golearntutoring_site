@@ -45,3 +45,54 @@ body { margin: 0; padding: 0; }
     height: 50%;
     background-color: white;
 }
+
+/* Main body */
+.main-body {
+    width: 100%;
+    height: 150vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #edede9;
+}
+
+.mission-section, .about-me-section, .misc-section {
+    width: 100%;
+    height: 100%;
+}
+
+.mission-section { 
+    background-image: url(./assets/image1.png);
+    background-size: cover;
+    background-position: center top;
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.4); /* Vignette */
+}
+
+.mission-section-body {
+    width: 45%;
+    height: 85%;
+    padding: 15px;
+    
+    background-color: rgb(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+/* backdrop-filter affects everything behind it excluding text,
+whereas filter affects all in the div including text */
+.mission-section-blur { 
+    width: 100%; 
+    height: 100%;
+
+    backdrop-filter: blur(2.5px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-me-section { background-color: #edede9;}
+.misc-section { background-color: #d6ccc2;}
