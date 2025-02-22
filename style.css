@@ -25,12 +25,12 @@ body { margin: 0; padding: 0; }
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex: .75;
+    flex: .725;
 }
 
 .nav-bar-jumper a {
-    /* Equivalent to default 16px */
-    font-size: 1rem;
+    /* 1rem:16px -> 1.1rem:17.6px */
+    font-size: 1.1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
     color: black;
@@ -38,7 +38,7 @@ body { margin: 0; padding: 0; }
 
     transition: .2s;
 }
-.nav-bar-jumper a:hover{ font-weight:normal; color: white; }
+.nav-bar-jumper a:hover{color: white; }
 
 .nav-bar-line {
     width: 2.5px;
