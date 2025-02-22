@@ -38,7 +38,7 @@ body { margin: 0; padding: 0; }
 
     transition: .2s;
 }
-.nav-bar-jumper a:hover{color: white; }
+.nav-bar-jumper a:hover{ color: white; }
 
 .nav-bar-line {
     width: 2.5px;
