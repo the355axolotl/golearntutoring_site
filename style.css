@@ -49,20 +49,23 @@ body { margin: 0; padding: 0; }
 /* Main body */
 .main-body {
     width: 100%;
-    height: 275vh;
+    height: 100vh;
 
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #edede9;
 }
 
-.mission-section, .about-me-section, .misc-section {
+.about-me-misc-section {
     width: 100%;
     height: 100%;
 }
 
-.mission-section { 
+.header-section { 
+    width: 100%;
+    height: 60vh;
+
     background-image: url(./assets/image1.png);
     background-size: cover;
     background-position: center top;
@@ -70,7 +73,7 @@ body { margin: 0; padding: 0; }
 }
 
 .mission-section-body {
-    width: 45%;
+    width: 35%; min-width: 350px;
     height: 85%;
     padding: 15px;
     
@@ -94,5 +97,26 @@ whereas filter affects all in the div including text */
 
 }
 
-.about-me-section { background-color: #edede9;}
-.misc-section { background-color: #d6ccc2;}
+.main-body {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-color: #edede9;
+}
+
+.about-me-misc-section { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.flex-item {
+    width: 450px;
+    height: 500px;
+}
