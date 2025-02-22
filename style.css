@@ -46,6 +46,12 @@ body { margin: 0; padding: 0; }
     background-color: white;
 }
 
+.berkshire{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* Main body */
 .main-body {
     width: 100%;
@@ -124,13 +130,15 @@ whereas filter affects all in the div including text */
 .contact-bar{
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
 }
 
+/* 
 .leftfoot{
-   /*  align-self: flex-start; */
+    align-self: flex-start;
 }
 
 .rightfoot{
-    /* align-self: end; */
-}
+    align-self: end;
+} 
+*/
