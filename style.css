@@ -140,11 +140,6 @@ whereas filter affects all in the div including text */
     background-image: url("./assets/image0.png");
 }
 
-#about-me-info { height: 300px; align-self: center; }
-#about-me-info p, #philosophy-info p, #lesson-plans-info p {
-    display: inline-flex;
-    height: fit-content;
-}
 #about-me-info, #philosophy-info, #lesson-plans-info {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
@@ -152,13 +147,38 @@ whereas filter affects all in the div including text */
 
     background-color: #d6ccc2;
 }
-#philosophy-info, #lesson-plans-info { background-color: #d6ccc2; width: 400px; }
-
-#lesson-plans-info {
+#about-me-info p, #philosophy-info p, #lesson-plans-info p { display: flex;}
+#philosophy-info, #lesson-plans-info {
+    width: 400px; 
+    
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     flex-direction: column;
 }
+
+#about-me-info { 
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#lesson-plans-info { display: flex; justify-content: center; flex-direction: column; }
+
+.carousel-arrows {
+    align-self: center;
+    width: 40%;
+    height: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-arrows img { max-width: 100%; max-height: 100%; transition: .25s;}
+.carousel-arrows img:hover {transform: scale(0.9, 0.9); filter: drop-shadow(.5px .5px 2px);}
 
 .lesson-plans-examples {
     flex: 2;
