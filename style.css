@@ -158,5 +158,5 @@ whereas filter affects all in the div including text */
 }
 
 .rightfoot{
-    align-self: end;
+    align-self: flex-end;
 } 
