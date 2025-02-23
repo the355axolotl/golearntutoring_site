@@ -140,7 +140,7 @@ whereas filter affects all in the div including text */
     background-image: url("./assets/image0.png");
 }
 
-
+#about-me-info { height: 300px; align-self: center; }
 #about-me-info p, #philosophy-info p, #lesson-plans-info p {
     display: inline-flex;
     height: fit-content;
