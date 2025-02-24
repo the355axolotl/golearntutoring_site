@@ -5,6 +5,15 @@
     font-style: normal;
 }
 
+/* ANIMATIONS */
+
+@keyframes slide-up {
+    0% {margin-top: 250%; opacity: 0;}
+    100% {margin-top: 0%; opacity: 1;}
+}
+
+/* MAIN ELEMENTS */
+
 body { margin: 0; padding: 0; }
 
 p { font-size: 1.15rem; }
@@ -29,6 +38,7 @@ p { font-size: 1.15rem; }
     overflow: hidden;
     object-fit: contain;
 }
+
 .nav-bar-left { flex: 1; }
 .nav-bar-right {
     display: flex;
@@ -75,6 +85,8 @@ p { font-size: 1.15rem; }
     width: 100%;
     height: 70vh;
 
+    overflow: hidden; /* For slide animation */
+
     background-image: url(./assets/image1.png);
     background-size: cover;
     background-position: center top;
@@ -82,7 +94,7 @@ p { font-size: 1.15rem; }
 }
 
 .mission-section-body {
-    width: 35%; min-width: 450px;
+    width: 35%; min-width: 400px;
     height: 85%;
     padding: 15px;
     
@@ -91,6 +103,9 @@ p { font-size: 1.15rem; }
     font-size: 1.25rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
+
+    animation-name: slide-up;
+    animation-duration: 2s;
 }
 
 /* backdrop-filter affects everything behind it excluding text,
@@ -133,7 +148,7 @@ whereas filter affects all in the div including text */
 }
 
 #about-me-img {
-    transform: scale(.75, .75);
+    transform: scale(.65, .65);
     border-radius: 50%;
     background-size: cover;
     background-position: center 20%;
@@ -148,22 +163,17 @@ whereas filter affects all in the div including text */
     background-color: #d6ccc2;
 }
 #about-me-info p, #philosophy-info p, #lesson-plans-info p { display: flex;}
-#philosophy-info, #lesson-plans-info {
+#about-me-info, #philosophy-info, #lesson-plans-info {
     width: 400px; 
     
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-}
-
-#about-me-info { 
-    height: 300px;
-
-    display: flex;
-    flex-direction: column;
     align-self: center;
+    flex-direction: column;
 }
+
+#about-me-info { height: 300px; }
 
 #lesson-plans-info { display: flex; justify-content: center; flex-direction: column; }
 
@@ -177,8 +187,8 @@ whereas filter affects all in the div including text */
     align-items: center;
 }
 
-.carousel-arrows img { max-width: 100%; max-height: 100%; transition: .25s;}
-.carousel-arrows img:hover {transform: scale(0.9, 0.9); filter: drop-shadow(.5px .5px 2px);}
+.carousel-arrows img { max-width: 100%; max-height: 100%; opacity: 0.65;}
+.carousel-arrows img:hover {transform: scale(0.9, 0.9); filter: drop-shadow(.5px .5px 2px); transition: .25s;}
 
 .lesson-plans-examples {
     flex: 2;
