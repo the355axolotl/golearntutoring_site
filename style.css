@@ -219,3 +219,20 @@ whereas filter affects all in the div including text */
 .rightfoot{
     align-self: flex-end;
 } 
+
+
+/* MISCELLANEOUS */
+
+.phil-text-chamber {
+    width: 100%; 
+    height: 65%; 
+    position: relative;
+    
+    font-size: .9625rem;
+}
+
+.phil-text-item {
+    position: absolute; 
+    top: 0; 
+    opacity: 0;
+}
