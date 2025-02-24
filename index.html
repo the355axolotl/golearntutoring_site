@@ -57,17 +57,54 @@
             </div>
             <div class="flex-item revealable" id="philosophy-info">
                 <h1 class="berkshire">Teaching Philosophy</h1>
-                <div class="phil-text-1">Growing up, it was emphasized to me that grades are what define the outcome of my academic career. 
-                    If I have high grades, I will be accepted into the “good” schools. 
-                    When I do well in the “good” schools, I am going to get a high-paying job. 
-                    With a high-paying job, I can save up a lot of money to provide for myself and my family.&nbsp;
-                    A successful future, I was taught, started with 100’s on tests and straight A’s on the report card. 
-                    This is not what I wish to pass on to my students. 
-                    I believe that true success comes from those who try and put effort into their work. 
-                    Even in times of failure, there is success. 
-                    It is achieved through working on themselves not only academically, but also mentally, emotionally and socially. 
-                    Childrens’ development in these categories are what they will be able to take with them as they further their education. 
-                    I believe that this can be done with a safe learning environment that fosters student-led discussions and teaching.</div>
+                <div class="phil-text-chamber">
+                    <div class="phil-text-item">Growing up, it was emphasized to me that grades are what define the outcome of my academic career. 
+                        If I have high grades, I will be accepted into the “good” schools. 
+                        When I do well in the “good” schools, I am going to get a high-paying job. 
+                        With a high-paying job, I can save up a lot of money to provide for myself and my family.&nbsp;
+                        A successful future, I was taught, started with 100’s on tests and straight A’s on the report card. 
+                        This is not what I wish to pass on to my students. 
+                        I believe that true success comes from those who try and put effort into their work. 
+                        Even in times of failure, there is success. 
+                        It is achieved through working on themselves not only academically, but also mentally, emotionally and socially. 
+                        Childrens’ development in these categories are what they will be able to take with them as they further their education. 
+                        I believe that this can be done with a safe learning environment that fosters student-led discussions and teaching.
+                    </div>
+                    <div class="phil-text-item">
+                        Incorporating some type of social emotional learning in my lessons is one way I allow students to have time to reflect and think about who they are and how they feel. 
+                        Social emotional learning ot SEL is not tied down to one particular subject which makes it easier to incorporate. 
+                        SEL increases a students’ self-awareness helping them develop healthy coping strategies and problem solving skills. 
+                        This benefits both the teacher and the students.
+                        I always feel encouraged when teachers conduct read-alouds with books that portray a culture that the students can either connect with or are not familiar with. 
+                        This exposes the children to different traditions and cultures that they may not learn about on a day to day basis. 
+                        I also conduct read-alouds with books that speak on matters like bullying to see how the students empathize with the characters and imagine themselves in the
+                        characters shoes.
+                    </div>
+                    <div class="phil-text-item">
+                        For example, in my class for Respect for All week we read the book The Invisible Boy by Trudy Ludwig. 
+                        It taught the kids about empathy, bullying, and cultures different from theirs. 
+                        There was a boy who brought food from his Korean culture, which other characters made fun of. 
+                        I had the students reflect on how they would feel if someone had teased them about their culture. 
+                        If there is not enough time for a SEL lesson, I include it in the students’ morning routine. 
+                        For example, we would do an emotional check-in where students are able to move their assigned sticker to a blue (tired, worried, sad), green (happy, energetic, glad), yellow (hyper, distracted), or red (angry, frustrated) zone. 
+                        SEL serves as a foundation for the students' behavior. 
+                        By teaching them about self-awareness, self-management, and responsible decision making, students develop healthy social schools they may use in and outside the classroom.
+                    </div>
+                    <div class="phil-text-item">
+                        “Education is not preparation for life; education is life itself”. 
+                    This quote from John Dewey is one that I think about often. 
+                    It reflects my views on education. I believe that we prepare children for life through the content that we teach them. 
+                    It is the experiences in the classroom that can prepare students for their life outside the classroom. 
+                    John Dewey’s theory of learning by doing is something I have always connected with. 
+                    High student engagement and participation can increase student learning. 
+                    In my classroom, I do not just hand the student a paper and tell them to answer questions 1, 2, 3. 
+                    I allow students to explore the material with the help of manipulatives, technology and more. 
+                    Group projects are a great way to improve student camaraderie. 
+                    In my current classroom, we allowed the students to explore the concept of area and perimeter by having them create their own robots. 
+                    They all measured on their own and cut out the pieces of their robots. At the end of it they all had beautiful area/perimeter robots to display. 
+                    Instead of sitting down and giving them problems to solve, we got creative and allowed their personalities to shine through.
+                    </div>
+                </div>
 
                     <div class="carousel-arrows">
                         <img src="./assets/left_arrow.png" role="button" id="philosophy-left-button" onclick="nextText('left')">
@@ -103,18 +140,20 @@
     <script>
         var btn_left = document.getElementById("philosophy-left-button");
         var btn_right = document.getElementById("philosophy-right-button");
+        var text_chamber = document.querySelectorAll(".phil-text-chamber > *")
         var counter = 0;
-        var max_text = 3;
+        var max_text = text_chamber.length-1;
 
+        text_chamber[counter].style.opacity = 1;
         btn_left.style.opacity = 0;
 
         function nextText(btn) {
             if (btn === "left" && counter != 0) { 
-                counter--; 
-                console.log(counter);
+                text_chamber[counter].style.opacity = 0;
+                text_chamber[--counter].style.opacity = 1;
             } else if (btn === "right" && counter != max_text) {
-                counter++;
-                console.log(counter);
+                text_chamber[counter].style.opacity = 0;
+                text_chamber[++counter].style.opacity = 1;
             }
 
             if (counter == 0) { 
