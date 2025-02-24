@@ -12,6 +12,18 @@
     100% {margin-top: 0%; opacity: 1;}
 }
 
+.revealable {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+  
+
 /* MAIN ELEMENTS */
 
 body { margin: 0; padding: 0; }

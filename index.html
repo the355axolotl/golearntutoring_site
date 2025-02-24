@@ -46,7 +46,7 @@
     </div>
 
     <div class="main-body">
-        <div class="about-me-misc-section">
+        <div class="about-me-misc-section revealable">
             <div class="flex-item" id="about-me-img"></div>
             <div class="flex-item" id="about-me-info">
                 <h1 class="berkshire">About Me</h1>
@@ -55,7 +55,7 @@
                     I am furthering my studies for a Master’s Degree in Special Education (Grades 1-6). 
                     My main priority is to make sure my students succeed.</p>
             </div>
-            <div class="flex-item" id="philosophy-info">
+            <div class="flex-item revealable" id="philosophy-info">
                 <h1 class="berkshire">Teaching Philosophy</h1>
                 <div class="phil-text-1">Growing up, it was emphasized to me that grades are what define the outcome of my academic career. 
                     If I have high grades, I will be accepted into the “good” schools. 
@@ -74,7 +74,7 @@
                         <img src="./assets/right_arrow.png" role="button" id="philosophy-right-button" onclick="nextText('right')">
                     </div>
             </div>
-            <div class="flex-item" id="lesson-plans-info">
+            <div class="flex-item revealable" id="lesson-plans-info">
                 <h1 class="berkshire">Lesson Plans</h1>
                 Below are lesson plans that I have been able to produce and conduct. Click on the boxes to open the lesson plan.<br><br>
                 <div class="lesson-plans-examples">
@@ -130,6 +130,37 @@
                 btn_right.onClick = true;
             }
         }
+
+
+        // animation for scrolling
+        let animation = {
+            revealDistance: 150,
+            initialOpacity: 0,
+            transitionDelay: 0,
+            transitionDuration: '1s',
+            transitionProperty: 'all',
+            transitionTimingFunction: 'ease'
+        };
+
+        let revealableContainers = document.querySelectorAll('.revealable');
+
+        function reveal() {
+            for (let i = 0; i < revealableContainers.length; i++) {
+                let windowHeight = window.innerHeight;
+                let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+
+                if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+                    revealableContainers[i].classList.add('active');
+                } else {
+                    revealableContainers[i].classList.remove('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+        // end of animation code 
+
+
     </script>
 </body>
 </html>
