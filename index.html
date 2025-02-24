@@ -31,7 +31,16 @@
         <div class="mission-section-blur">
             <div class="mission-section-body">
                 <h1 class="berkshire">Go Learn</h1>
-                <p>Placeholder text, Hello World!</p>
+                <p>Welcome to GoLearn! We are so happy to have you. 
+                    The following are the services that we currently offer:</p>
+
+                    <ul style="list-style-type: none; margin: 10px 0;">
+                        <li>Homework Help</li>
+                        <li>Reading Skills (phonics and fluency)</li>
+                        <li>Math Lessons </li>
+                        <li>ELA Lessons</li>
+                    </ul>
+                <p>For updates regarding services, please visit our <span><a href="https://www.instagram.com/golearn.tutoring/" target="_blank">Instagram</a></span> page!</p>
             </div>
         </div>
     </div>
@@ -48,7 +57,7 @@
             </div>
             <div class="flex-item" id="philosophy-info">
                 <h1 class="berkshire">Teaching Philosophy</h1>
-                <div>Growing up, it was emphasized to me that grades are what define the outcome of my academic career. 
+                <div class="phil-text-1">Growing up, it was emphasized to me that grades are what define the outcome of my academic career. 
                     If I have high grades, I will be accepted into the “good” schools. 
                     When I do well in the “good” schools, I am going to get a high-paying job. 
                     With a high-paying job, I can save up a lot of money to provide for myself and my family.&nbsp;
@@ -61,8 +70,8 @@
                     I believe that this can be done with a safe learning environment that fosters student-led discussions and teaching.</div>
 
                     <div class="carousel-arrows">
-                        <img src="./assets/left_arrow.png" class="philosophy-left-button">
-                        <img src="./assets/right_arrow.png" class="philosophy-rightt-button">
+                        <img src="./assets/left_arrow.png" role="button" id="philosophy-left-button" onclick="nextText('left')">
+                        <img src="./assets/right_arrow.png" role="button" id="philosophy-right-button" onclick="nextText('right')">
                     </div>
             </div>
             <div class="flex-item" id="lesson-plans-info">
@@ -90,5 +99,37 @@
             Go Learning Tutoring &copy; 2025 All Rights Reserved
         </div>
     </footer>
+
+    <script>
+        var btn_left = document.getElementById("philosophy-left-button");
+        var btn_right = document.getElementById("philosophy-right-button");
+        var counter = 0;
+        var max_text = 3;
+
+        btn_left.style.opacity = 0;
+
+        function nextText(btn) {
+            if (btn === "left" && counter != 0) { 
+                counter--; 
+                console.log(counter);
+            } else if (btn === "right" && counter != max_text) {
+                counter++;
+                console.log(counter);
+            }
+
+            if (counter == 0) { 
+                btn_left.style.opacity = 0;
+                btn_left.onClick = false;
+            } else if (counter === max_text) {
+                btn_right.style.opacity = 0;
+                btn_right.onClick = false;
+            } else {
+                btn_left.style.opacity = .65;
+                btn_right.style.opacity = .65;
+                btn_left.onClick = true;
+                btn_right.onClick = true;
+            }
+        }
+    </script>
 </body>
 </html>
