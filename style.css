@@ -36,6 +36,10 @@ p { font-size: 1.15rem; }
     padding: 5px 10px 5px 10px;
     /* Prevents padding from extending width by using inner space instead */
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 
     display: flex;
     justify-content: center;
@@ -96,7 +100,7 @@ p { font-size: 1.15rem; }
 
 .header-section { 
     width: 100%;
-    height: 85vh;
+    height: 90vh;
 
     overflow: hidden; /* For slide animation */
 
