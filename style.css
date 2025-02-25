@@ -114,12 +114,12 @@ p { font-size: 1.15rem; }
 }
 
 .mission-section-body {
-    width: 65%; min-width: 400px; max-width: 1250px;
-    height: 90%; max-height: 750px;
+    width: 55%; min-width: 400px; max-width: 1250px;
+    height: 75%; max-height: 750px;
     padding: 15px;
     box-sizing: border-box;
     
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255, 0.55);
     text-align: center;
     font-size: 1.5em;
     overflow: hidden;
@@ -136,7 +136,7 @@ p { font-size: 1.15rem; }
 .mission-section-body > * { width: 100%; height: 100%; }
 
 #mission-text {
-    font-size: clamp(1rem/2, -0.875rem + 8.333vw, 3.5rem/2);;
+    font-size: clamp(1rem/2, -0.875rem + 8.333vw, 3.5rem/2);
 }
 
 /* backdrop-filter affects everything behind it excluding text,
@@ -279,37 +279,19 @@ whereas filter affects all in the div including text */
     box-sizing: border-box;
 }
 
-/* MEDIA QUERIES */
-
-  @media only screen and (min-width: 890px) and (max-width: 989px) {
-    #about-me-info { 
-        height: 500px; 
-        justify-content: space-between;
-    }
-
-    #about-me-info p {
-        height: 100%;
-        line-height: 35px;
-    }
-  }
+/* MEDIA QUERIES + HTML ADJUSTMENTS */
 
   /* Small phones */
   @media (max-width: 480px) {
     .header-section{
-        height: 100vh;
+        height: 90vh;
         padding-top: 60px;
     }
 
     .mission-section-body{
-        min-width: 300px;
+        min-width: 400;
     }
-    
-    .nav-bar-left { flex: .25; }
-    .nav-bar-right { 
-        font-size: .85em;
-        flex: 2; 
-    }
-    
+
     .phil-text-item { font-size: .925rem;}
 
     /* Footer */
@@ -322,11 +304,32 @@ whereas filter affects all in the div including text */
     }
   }
 
-  @media (max-width:801px)  {
+@media (max-width:801px)  {
     .nav-bar-left { flex: .25; }
     .nav-bar-right { 
         font-size: .85em;
         flex: 2; 
+    }
+
+    #mission-text {
+        font-size: 1rem;
+    }
+}
+
+  @media only screen and (min-width: 802px) and (max-width: 989px) {
+    #about-me-info { 
+        height: 500px; 
+        justify-content: space-between;
+    }
+
+    #about-me-info p {
+        height: 100%;
+        line-height: 35px;
+    }
+
+    .mission-section-body {
+        padding: 30px;
+        box-sizing: border-box;
     }
   }
 
