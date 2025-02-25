@@ -282,7 +282,7 @@ whereas filter affects all in the div including text */
 /* MEDIA QUERIES + HTML ADJUSTMENTS */
 
   /* Small phones */
-  @media (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     .header-section{
         height: 90vh;
         padding-top: 60px;
@@ -304,7 +304,8 @@ whereas filter affects all in the div including text */
     }
   }
 
-@media (max-width:801px)  {
+  /* Beyond are for iPads and tablets */
+@media screen and (max-width:801px)  {
     .nav-bar-left { flex: .25; }
     .nav-bar-right { 
         font-size: .85em;
@@ -316,7 +317,7 @@ whereas filter affects all in the div including text */
     }
 }
 
-  @media only screen and (min-width: 802px) and (max-width: 989px) {
+@media only screen and (min-width: 802px) and (max-width: 989px) {
     #about-me-info { 
         height: 500px; 
         justify-content: space-between;
@@ -334,7 +335,7 @@ whereas filter affects all in the div including text */
   }
 
   /* For mega monitors */
-  @media (min-width: 1480px) {
+@media (min-width: 1480px) {
     #about-me-info { 
         height: 500px; 
         justify-content: space-between;
