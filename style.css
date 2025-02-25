@@ -300,6 +300,10 @@ whereas filter affects all in the div including text */
   @media only screen and (min-width: 370px) and (max-width: 415px) { /* Small phones */
     .phil-text-item { font-size: .925rem;}
     
+    .mission-section-body{
+        min-width: 300px;
+    }
+
     /* Footer */
     .leftfoot img {
         width: 30px;
