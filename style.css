@@ -297,7 +297,7 @@ whereas filter affects all in the div including text */
     }
   }
 
-  @media only screen and (min-width: 370px) and (max-width: 415px) { /* Small phones */
+  @media only screen and (min-width: 360px) and (max-width: 430px) { /* Small phones */
     .phil-text-item { font-size: .925rem;}
     
     .mission-section-body{
@@ -316,7 +316,7 @@ whereas filter affects all in the div including text */
 
   /* Horizontal Phones */
 
-  @media only screen and (min-height: 370px) and (max-height: 415px) { /* Small phones */
+  @media only screen and (min-height: 360px) and (max-height: 430px) { /* Small phones */
     .phil-text-item { font-size: .925rem;}
     
 /*     .mission-section-body{
