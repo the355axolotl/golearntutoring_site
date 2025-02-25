@@ -282,7 +282,7 @@ whereas filter affects all in the div including text */
 /* MEDIA QUERIES + HTML ADJUSTMENTS */
 
   /* Small phones */
-  @media screen and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     .header-section{
         height: 90vh;
         padding-top: 60px;
