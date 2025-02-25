@@ -281,18 +281,6 @@ whereas filter affects all in the div including text */
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 1440px) { /* For mega monitors */
-    #about-me-info { 
-        height: 500px; 
-        justify-content: space-between;
-    }
-
-    #about-me-info p {
-        height: 100%;
-        line-height: 35px;
-    }
-  }
-
   @media only screen and (min-width: 890px) and (max-width: 989px) {
     #about-me-info { 
         height: 500px; 
@@ -305,7 +293,13 @@ whereas filter affects all in the div including text */
     }
   }
 
-  @media only screen and (min-width: 0px) and (max-width: 775px) { /* Small phones */
+  /* Small phones */
+  @media (max-width: 480px) {
+    .header-section{
+        height: 100vh;
+        padding-top: 60px;
+    }
+
     .mission-section-body{
         min-width: 300px;
     }
@@ -328,14 +322,23 @@ whereas filter affects all in the div including text */
     }
   }
 
-  /* Horizontal Phones */
+  @media (max-width:801px)  {
+    .nav-bar-left { flex: .25; }
+    .nav-bar-right { 
+        font-size: .85em;
+        flex: 2; 
+    }
+  }
 
-  @media only screen and (min-height: 360px) and (max-height: 430px) { /* Small phones */
-    .phil-text-item { font-size: .9em;}
-    
-    .header-section{
-        height: 120vh;
-        padding-top: 60px;
+  /* For mega monitors */
+  @media (min-width: 1480px) {
+    #about-me-info { 
+        height: 500px; 
+        justify-content: space-between;
     }
 
+    #about-me-info p {
+        height: 100%;
+        line-height: 35px;
+    }
   }
